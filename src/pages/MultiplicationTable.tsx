@@ -12,17 +12,17 @@ export default function MultiplicationTable() {
   const rows = Array.from({ length: maxValue }, (_, i) => i + 1);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-sky-100 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100 flex items-center justify-center p-6">
       <div className="w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-sky-500 rounded-2xl shadow-lg mb-4">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-500 rounded-2xl shadow-lg mb-4">
             <Hash className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-4xl font-extrabold text-gray-800 tracking-tight">
             Multiplication Table
           </h1>
-          <p className="text-sky-600 font-semibold text-lg mt-1">
+          <p className="text-pink-600 font-semibold text-lg mt-1">
             of {MULTIPLIER}
           </p>
         </div>
@@ -40,16 +40,16 @@ export default function MultiplicationTable() {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setMaxValue(Number(e.target.value))
             }
-            className="flex-1 accent-sky-500"
+            className="flex-1 accent-pink-500"
           />
-          <span className="text-sky-600 font-bold text-lg w-8 text-center">
+          <span className="text-pink-600 font-bold text-lg w-8 text-center">
             {maxValue}
           </span>
         </div>
 
         {/* Table */}
         <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-          <div className="bg-sky-500 px-6 py-3 flex items-center justify-between">
+          <div className="bg-pink-500 px-6 py-3 flex items-center justify-between">
             <span className="text-white font-bold text-base">Expression</span>
             <span className="text-white font-bold text-base">Result</span>
           </div>
@@ -63,7 +63,7 @@ export default function MultiplicationTable() {
                 className={clsx(
                   'flex items-center justify-between px-6 py-3 transition-colors duration-150 cursor-default',
                   highlightedRow === n
-                    ? 'bg-sky-50'
+                    ? 'bg-pink-50'
                     : n % 2 === 0
                     ? 'bg-gray-50'
                     : 'bg-white'
@@ -72,7 +72,7 @@ export default function MultiplicationTable() {
                 <span
                   className={clsx(
                     'text-base font-medium',
-                    highlightedRow === n ? 'text-sky-700' : 'text-gray-700'
+                    highlightedRow === n ? 'text-pink-700' : 'text-gray-700'
                   )}
                 >
                   {MULTIPLIER} &times; {n}
@@ -80,7 +80,7 @@ export default function MultiplicationTable() {
                 <span
                   className={clsx(
                     'text-base font-bold',
-                    highlightedRow === n ? 'text-sky-600' : 'text-gray-800'
+                    highlightedRow === n ? 'text-pink-600' : 'text-gray-800'
                   )}
                 >
                   = {MULTIPLIER * n}
