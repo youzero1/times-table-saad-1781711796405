@@ -9,7 +9,7 @@ export default function MultiplicationTable() {
   const [maxValue, setMaxValue] = useState<number>(MAX_DEFAULT);
   const [highlightedRow, setHighlightedRow] = useState<number | null>(null);
 
-  const rows = Array.from({ length: maxValue }, (_, i) => i + 1);
+  const rows: number[] = Array.from({ length: maxValue }, (_, i) => i + 1);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 flex items-center justify-center p-6">
@@ -55,7 +55,7 @@ export default function MultiplicationTable() {
           </div>
 
           <ul className="divide-y divide-gray-100">
-            {rows.map((n) => (
+            {rows.map((n: number) => (
               <li
                 key={n}
                 onMouseEnter={() => setHighlightedRow(n)}
