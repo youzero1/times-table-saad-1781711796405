@@ -20,7 +20,7 @@ export default function MultiplicationTable() {
             <Hash className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-4xl font-extrabold text-red-800 tracking-tight">
-            Multiplication Table
+            Multiplication Table123
           </h1>
           <p className="text-red-500 font-semibold text-lg mt-1">
             of {MULTIPLIER}
